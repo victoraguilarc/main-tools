@@ -1,0 +1,24 @@
+
+services:
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    command: [
+      "redis-server",
+      "--requirepass", "$REDIS_PASSWORD"
+    ]
+    volumes:
+      - redis_data:/data
+    networks:
+      - shared-network
+
+volumes:
+  redis_data:
+
+networks:
+  shared-network:
+    external: true

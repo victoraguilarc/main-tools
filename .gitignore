@@ -1,0 +1,11 @@
+proxy-manager/data/
+portainer/data/
+.env
+*.env
+.idea/
+*.swp
+package-lock.json
+__pycache__
+.pytest_cache
+.venv
+*.egg-info
