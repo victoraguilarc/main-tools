@@ -1,5 +1,5 @@
 
-# Xiberty Tools
+# Server Tools
 
 A compilation of docker definitions to deploy self hosted tools for ops purposes
 
@@ -40,6 +40,12 @@ $ docker network create nginx-network
   $ cd proxy-manager
   $ docker compose up -d --build
   ```
+#### Default credentials: 
+```
+Email: admin@example.com
+Password: changeme
+```
+
 **4. Start Portainer.**
   ```
   $ cd portainer
